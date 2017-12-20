@@ -1,6 +1,8 @@
+from subprocess import getoutput
 import discord
 import asyncio
 
+token = getoutput("cat ~/discord-token/token")
 client = discord.Client()
 
 @client.event
@@ -24,4 +26,4 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
 
-client.run('token')
+client.run(token)

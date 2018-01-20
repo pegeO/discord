@@ -24,6 +24,6 @@ async def on_message(message):
         await client.edit_message(tmp, 'You have {} messages.'.format(counter))
     elif message.content.startswith('!sleep'):
         await asyncio.sleep(5)
-        await client.send_message(message.channel, 'Done sleeping')
+        await client.send_message(message.channel, 'Sleeping done.')
 
 client.run(token)
